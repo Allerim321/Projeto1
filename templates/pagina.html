@@ -7,6 +7,8 @@ body{
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -18,6 +20,7 @@ body{
     background-color: darkslategray;
     border: solid 3px black;
     align-content: center;
+    padding-left: 10px;
 }
 
 .form{
@@ -48,8 +51,9 @@ body{
 {% endblock %}
 
 {%block body%}
-<div class="container">
+
     <nav class="navbar">Página de login</nav>
+    <div class="container">
     <h2>Login</h2>
     <form class="form" action="http://192.168.0.160:5000/login" method="post">
         <label for="nome">Nome de usuário:</label><br>
