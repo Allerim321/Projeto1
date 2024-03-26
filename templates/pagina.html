@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<style>
+body{
+    background-color: rgb(206, 222, 219);
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: darkslategray;
+    border: solid 3px black;
+    align-content: center;
+}
+
+.form{
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 200px;
+}
+
+.inputs{
+    margin-bottom: 10px;
+}
+
+.botao{
+    width: 100px;
+    height: 40px;
+    color: darkslategray;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+.botao:hover{
+    background-color: rgb(165, 215, 216);
+    border: 1px solid black;
+}
+</style>
+{% endblock %}
+
+{%block body%}
+<div class="container">
+    <nav class="navbar">Página de login</nav>
+    <h2>Login</h2>
+    <form class="form" action="http://192.168.0.160:5000/login" method="post">
+        <label for="nome">Nome de usuário:</label><br>
+        <input class="inputs" type="text" id="nome" name="Login"><br>
+        <label for="senha">Senha:</label><br>
+        <input class="inputs" type="password" id="senha" name="Senha"><br><br>
+        <input class="botao" type="submit" value="Login">
+    </form>
+</div>
+{%endblock%}
